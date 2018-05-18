@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic Language
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    {{'Hello' | translate}}, {{'Good Morning' | translate}}
+  </ion-item>
+  <ion-item>
+    <ion-label>Label</ion-label>
+    <ion-select [(ngModel)]="language" (ionChange)="setLang()">
+      <ion-option value="en">English</ion-option>
+      <ion-option value="de">Deutsch</ion-option>
+      <ion-option value="pt-br">Português</ion-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
